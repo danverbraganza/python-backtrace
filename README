@@ -1,0 +1,21 @@
+Python Backtrace
+----------------
+
+Python backtrace is a prototype implementation of my solution to 
+the need for a debugging tool that was discussed by Glenn Ramsey 
+at the 21st July meeting of NZPUG.
+
+
+This implementation uses Python's "with" statement and decorators 
+to keep a track of every method's invocation and return values. 
+In the event of an exception being raised, not only is the current 
+stack open for inspection but also the stack + return values of 
+the last few function returns.
+
+Note: currently this is quite hacky, and uses global variables 
+nastily because I am running late and needed to get it done.
+
+I am not sure if it will be worth maintaining this, or better to just
+start from scratch: this project was as much about learning how to 
+write context managers and getting more experience with github as it
+was about the stated problem.
